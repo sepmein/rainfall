@@ -2,7 +2,8 @@
 library(ggplot2)
 library(dplyr)
 
-harmonic_analysis <- function(data, rainfall_column, by_column, analyse_annual_difference = TRUE) {
+harmonic_analysis <- function(data, rainfall_column, by_column) {
+  adm <- data |> select({by_column})
   rainfall_data <- data[rainfall_collumn] |> st_drop_geometry()
 }
 # Assume you have the monthly precipitation data (e.g., for one year)
